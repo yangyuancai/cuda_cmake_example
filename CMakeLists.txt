@@ -25,7 +25,7 @@ target_compile_features(particles PUBLIC cxx_std_14)
 set_target_properties( particles PROPERTIES CUDA_SEPARABLE_COMPILATION ON )					  
 add_executable(particle_test test.cu)
 
-#set_target_properties(particle_test PROPERTIES CUDA_SEPARABLE_COMPILATION ON)
+set_target_properties(particle_test PROPERTIES CUDA_SEPARABLE_COMPILATION ON)
 target_link_libraries(particle_test PRIVATE particles)
 
 #add_test(NAME particles_10k COMMAND particle_test 10000 )
